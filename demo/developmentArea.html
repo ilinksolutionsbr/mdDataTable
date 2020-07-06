@@ -1,6 +1,7 @@
 <div ng-app="developmentAreaApp" ng-controller="DevelopmentAreaController" layout-margin>
     <mdt-table
             paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20,50]}"
+            mdt-translations="{ 'rowsPerPage': 'Linhas por pagina', 'of': 'de' }"
             table-card="{isEnabled: true, title: 'Anyad', columnSelector: true}"
             alternate-headers="'contextual'"
             mdt-loading-indicator="{color: 'red'}"
