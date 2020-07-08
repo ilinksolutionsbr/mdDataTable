@@ -140,7 +140,8 @@
                 virtualRepeat: '=',
                 mdtTriggerRequest: '&?',
                 mdtTranslations: '=?',
-                mdtLoadingIndicator: '=?'
+                mdtLoadingIndicator: '=?',
+                mdtIsLoading: '='
             },
             controller: function mdtTable($scope){
                 var vm = this;

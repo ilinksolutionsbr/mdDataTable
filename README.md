@@ -55,6 +55,7 @@ http://www.google.com/design/spec/components/data-tables.html
  - mdt-trigger-request
  - mdt-translations
  - mdt-loading-indicator
+ - mdt-is-loading
 
 [Column attributes (`mdt-column`)](#column-attributes)
  - align-rule
@@ -141,6 +142,7 @@ http://www.google.com/design/spec/components/data-tables.html
 |:white_check_mark:|                                    | largeEditDialog.saveButtonLabel | String        | When edit mode is on, in the modal you can click on a button which has the 'Save' label. |
 |:white_check_mark:|                                    | largeEditDialog.cancelButtonLabel| String       | When edit mode is on, in the modal you can click on a button which has the : 'Cancel' label. |
 |:white_check_mark:| mdt-loading-indicator              |                                 | Object        | optional, if set then loading indicator can be customised. |
+|:white_check_mark:| mdt-is-loading              |                                 | Boolean        | optional, is true the loading is displayed. Useful if you want to control it by yourself |
 |:white_check_mark:|                                    | color                           | String        | Passing a css compatible format as a color will set the color for the loading indicator (e.g.: 'red' or '#008bd2', '#000') |
 Html support is available for `mdt-row`, see more: [Custom cell content (`mdt-custom-cell`)](#custom-cell-content)
 
