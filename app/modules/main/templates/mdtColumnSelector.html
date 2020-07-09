@@ -3,12 +3,19 @@
     <div class="md-whiteframe-z2">
         <md-content class="md-body-1">
             <div class="md-subhead p-t-md p-l-md mdt-column-selector-title" layout="row">
-                Columns
+                {{mdtTranslations.columnSelector.title}}
             </div>
             <div layout="row" layout-align="start center" class="selectall_clearall p-l-md p-t-md p-b-sm">
-                <a href="#" ng-click="selectAll($event)" ng-class="{'disabled' : isAllSelected()}">Select all</a> <span>-</span> <a href="#" ng-class="{'disabled' : isNothingSelected()}" ng-click="clearAll($event)">Clear</a>
+                <a href="#" ng-click="selectAll($event)" ng-class="{'disabled' : isAllSelected()}">
+                    {{mdtTranslations.columnSelector.selectAll}}
+                </a>
+                <span>-</span> <a href="#" ng-class="{'disabled' : isNothingSelected()}" ng-click="clearAll($event)">{{mdtTranslations.columnSelector.clear}}</a>
 
-                <div class="selected_items p-r-md" flex ng-if="selectedItems.length">{{selectedItems.length}} Selected</div>
+                <div class="selected_items p-r-md" flex ng-if="selectedItems.length">
+                    {{selectedItems.length}}
+                    <span ng-show="selectedItems.length <= 1">{{mdtTranslations.columnSelector.selectedSingular}}</span>
+                    <span ng-show="selectedItems.length > 1">{{mdtTranslations.columnSelector.selectedPlural}}</span>
+                </div>
             </div>
 
             <div layout="column" class="p-b-n p-t-sm p-l-md p-r-md filter__scroll">
@@ -22,8 +29,8 @@
             </div>
 
             <div class="p-b-sm p-t-sm p-l-sm" layout="row" layout-align="start center">
-                <md-button class="md-raised md-primary" ng-click="confirmCallback({paginator: mdtPaginationHelper})">Ok</md-button>
-                <md-button class="md-raised" ng-click="cancelCallback()">Cancel</md-button>
+                <md-button class="md-raised md-primary" ng-click="confirmCallback({paginator: mdtPaginationHelper})">{{mdtTranslations.columnSelector.ok}}</md-button>
+                <md-button class="md-raised" ng-click="cancelCallback()">{{mdtTranslations.columnSelector.cancel}}</md-button>
             </div>
         </md-content>
     </div>

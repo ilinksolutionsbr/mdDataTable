@@ -174,6 +174,15 @@
                     $scope.mdtTranslations.largeEditDialog = $scope.mdtTranslations.largeEditDialog || {};
                     $scope.mdtTranslations.largeEditDialog.saveButtonLabel = $scope.mdtTranslations.largeEditDialog.saveButtonLabel || 'Save';
                     $scope.mdtTranslations.largeEditDialog.cancelButtonLabel = $scope.mdtTranslations.largeEditDialog.cancelButtonLabel || 'Cancel';
+
+                    $scope.mdtTranslations.columnSelector = $scope.mdtTranslations.columnSelector || {};
+                    $scope.mdtTranslations.columnSelector.title = $scope.mdtTranslations.columnSelector.title || 'Columns';
+                    $scope.mdtTranslations.columnSelector.selectAll = $scope.mdtTranslations.columnSelector.selectAll || 'Select all';
+                    $scope.mdtTranslations.columnSelector.selectedSingular = $scope.mdtTranslations.columnSelector.selectedSingular || 'Selected';
+                    $scope.mdtTranslations.columnSelector.selectedPlural = $scope.mdtTranslations.columnSelector.selectedPlural || 'Selected';
+                    $scope.mdtTranslations.columnSelector.clear = $scope.mdtTranslations.columnSelector.clear || 'Clear';
+                    $scope.mdtTranslations.columnSelector.ok = $scope.mdtTranslations.columnSelector.ok || 'Ok';
+                    $scope.mdtTranslations.columnSelector.cancel = $scope.mdtTranslations.columnSelector.cancel || 'Cancel';
                 }
 
                 // fill storage with values if set
