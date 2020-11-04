@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('developmentAreaApp', ['ngMaterial', 'mdDataTable']);
-    angular.module('developmentAreaApp').controller('DevelopmentAreaController', function($scope, $q){
+    angular.module('developmentAreaApp').controller('DevelopmentAreaController', function ($scope, $q){
 
         // the public API we use does not support advances searching/filtering on names, nor on item ids, so I've decided to make my own list and filter on it.
         var nutritionList = [
