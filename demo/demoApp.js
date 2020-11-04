@@ -2,7 +2,7 @@
     'use strict';
 
     function DemoController($scope, PageService, $http, $compile){
-        $scope.isDevelopmentAreaActive = false;
+        $scope.isDevelopmentAreaActive = true;
         $scope.pages = PageService.getAllPages();
         $scope.selectPage = selectPage;
 
@@ -17,9 +17,9 @@
             }else{
                 $scope.isDevelopmentAreaActive = false;
 
-                $http.get('http://codepen.io/iamisti/pen/'+aPage.codepen+'.html').then(function(content){
-                    angular.element('#myDiv').empty().append($compile(content.data)($scope));
-                });
+                // $http.get('http://codepen.io/iamisti/pen/'+aPage.codepen+'.html').then(function(content){
+                //     angular.element('#myDiv').empty().append($compile(content.data)($scope));
+                // });
             }
         }
     }
@@ -33,61 +33,63 @@
             {
                 name: 'Development area',
                 codepen: '-'
-            },{
-                name: 'Basic',
-                codepen: 'mVOKEw'
-            },{
-                name: 'Table card',
-                codepen: 'bEBKgK'
-            },{
-                name: 'Selectable Columns',
-                codepen: 'RGvvWL'
-            },{
-                name: 'Selectable rows',
-                codepen: 'bEBKRj'
-            },{
-                name: 'Selected rows callback',
-                codepen: 'OMvbMj'
-            },{
-                name: 'Sortable columns',
-                codepen: 'dGOKzN'
-            },{
-                name: 'Virtual Repeat',
-                codepen: 'qbxLEQ'
-            },{
-                name: 'Animated sort icon',
-                codepen: 'MKbXOM'
-            },{
-                name: 'Pagination',
-                codepen: 'GoNGMy'
-            },{
-                name: 'Ajax support',
-                codepen: 'BjpNow'
-            },{
-                name: 'Ajax search support',
-                codepen: 'RRrjLk'
-            },{
-                name: 'Ajax column filter support (NEW!)',
-                codepen: 'kkvBxd'
-            },{
-                name: 'Ajax html cell support',
-                codepen: 'pbLYwq'
-            },{
-                name: 'Search',
-                codepen: 'bEBKYx'
-            },{
-                name: 'Html support',
-                codepen: 'LGLYjZ'
-            },{
-                name: 'Editable fields - small dialog',
-                codepen: 'LNYBZX'
-            },{
-                name: 'Editable fields - large dialog',
-                codepen: 'zqYLNj'
-            },{
-                name: 'Vertical Scroll',
-                codepen: 'mAKWLb'
-            }/*,{
+            }
+            // ,{
+            //     name: 'Basic',
+            //     codepen: 'mVOKEw'
+            // },{
+            //     name: 'Table card',
+            //     codepen: 'bEBKgK'
+            // },{
+            //     name: 'Selectable Columns',
+            //     codepen: 'RGvvWL'
+            // },{
+            //     name: 'Selectable rows',
+            //     codepen: 'bEBKRj'
+            // },{
+            //     name: 'Selected rows callback',
+            //     codepen: 'OMvbMj'
+            // },{
+            //     name: 'Sortable columns',
+            //     codepen: 'dGOKzN'
+            // },{
+            //     name: 'Virtual Repeat',
+            //     codepen: 'qbxLEQ'
+            // },{
+            //     name: 'Animated sort icon',
+            //     codepen: 'MKbXOM'
+            // },{
+            //     name: 'Pagination',
+            //     codepen: 'GoNGMy'
+            // },{
+            //     name: 'Ajax support',
+            //     codepen: 'BjpNow'
+            // },{
+            //     name: 'Ajax search support',
+            //     codepen: 'RRrjLk'
+            // },{
+            //     name: 'Ajax column filter support (NEW!)',
+            //     codepen: 'kkvBxd'
+            // },{
+            //     name: 'Ajax html cell support',
+            //     codepen: 'pbLYwq'
+            // },{
+            //     name: 'Search',
+            //     codepen: 'bEBKYx'
+            // },{
+            //     name: 'Html support',
+            //     codepen: 'LGLYjZ'
+            // },{
+            //     name: 'Editable fields - small dialog',
+            //     codepen: 'LNYBZX'
+            // },{
+            //     name: 'Editable fields - large dialog',
+            //     codepen: 'zqYLNj'
+            // },{
+            //     name: 'Vertical Scroll',
+            //     codepen: 'mAKWLb'
+            // }
+            /*,{
              name: 'Ripple effect',
              codepen: 'xZRzpV'
              }*/
@@ -101,25 +103,26 @@
     //already defined in external resources
     angular.module('demo', ['ngMaterial',
         'developmentAreaApp',
-        'exampleApp',
-        'exampleApp2',
-        'exampleApp3',
-        'exampleApp4',
-        'exampleApp5',
-        'exampleApp6',
-        'exampleApp7',
-        'exampleApp8',
-        'exampleApp9',
-        'exampleApp10',
-        'exampleApp11',
-        'exampleApp12',
-        'exampleApp13',
-        'exampleApp14',
-        'exampleApp15',
-        'exampleApp16',
-        'exampleApp17',
-        'exampleApp18',
-        'exampleApp19'
+        // the apps below are not available anymore
+        // 'exampleApp',
+        // 'exampleApp2',
+        // 'exampleApp3',
+        // 'exampleApp4',
+        // 'exampleApp5',
+        // 'exampleApp6',
+        // 'exampleApp7',
+        // 'exampleApp8',
+        // 'exampleApp9',
+        // 'exampleApp10',
+        // 'exampleApp11',
+        // 'exampleApp12',
+        // 'exampleApp13',
+        // 'exampleApp14',
+        // 'exampleApp15',
+        // 'exampleApp16',
+        // 'exampleApp17',
+        // 'exampleApp18',
+        // 'exampleApp19'
     ]);
 
     angular.module('demo').service('PageService', PageService);
