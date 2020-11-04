@@ -143,7 +143,7 @@
                 mdtLoadingIndicator: '=?',
                 mdtIsLoading: '='
             },
-            controller: function mdtTable($scope){
+            controller: function mdtTable($scope, MdtTranslations){
                 var vm = this;
 
                 $scope.rippleEffectCallback = function(){
@@ -165,24 +165,28 @@
 
                 // set translations or fallback to a default value
                 function _setDefaultTranslations(){
+
+                    var providerTranslations = MdtTranslations;
+
                     $scope.mdtTranslations = $scope.mdtTranslations || {};
-
-                    $scope.mdtTranslations.rowsPerPage = $scope.mdtTranslations.rowsPerPage || 'Rows per page:';
-
-                    $scope.mdtTranslations.of = $scope.mdtTranslations.of || 'of';
-
-                    $scope.mdtTranslations.largeEditDialog = $scope.mdtTranslations.largeEditDialog || {};
-                    $scope.mdtTranslations.largeEditDialog.saveButtonLabel = $scope.mdtTranslations.largeEditDialog.saveButtonLabel || 'Save';
-                    $scope.mdtTranslations.largeEditDialog.cancelButtonLabel = $scope.mdtTranslations.largeEditDialog.cancelButtonLabel || 'Cancel';
-
                     $scope.mdtTranslations.columnSelector = $scope.mdtTranslations.columnSelector || {};
-                    $scope.mdtTranslations.columnSelector.title = $scope.mdtTranslations.columnSelector.title || 'Columns';
-                    $scope.mdtTranslations.columnSelector.selectAll = $scope.mdtTranslations.columnSelector.selectAll || 'Select all';
-                    $scope.mdtTranslations.columnSelector.selectedSingular = $scope.mdtTranslations.columnSelector.selectedSingular || 'Selected';
-                    $scope.mdtTranslations.columnSelector.selectedPlural = $scope.mdtTranslations.columnSelector.selectedPlural || 'Selected';
-                    $scope.mdtTranslations.columnSelector.clear = $scope.mdtTranslations.columnSelector.clear || 'Clear';
-                    $scope.mdtTranslations.columnSelector.ok = $scope.mdtTranslations.columnSelector.ok || 'Ok';
-                    $scope.mdtTranslations.columnSelector.cancel = $scope.mdtTranslations.columnSelector.cancel || 'Cancel';
+                    $scope.mdtTranslations.largeEditDialog = $scope.mdtTranslations.largeEditDialog || {};
+
+                    $scope.mdtTranslations.rowsPerPage = $scope.mdtTranslations.rowsPerPage || providerTranslations.rowsPerPage;
+
+                    $scope.mdtTranslations.of = $scope.mdtTranslations.of || providerTranslations.of;
+
+                    $scope.mdtTranslations.largeEditDialog.saveButtonLabel = $scope.mdtTranslations.largeEditDialog.saveButtonLabel || providerTranslations.largeEditDialog.saveButtonLabel;
+                    $scope.mdtTranslations.largeEditDialog.cancelButtonLabel = $scope.mdtTranslations.largeEditDialog.cancelButtonLabel || providerTranslations.largeEditDialog.cancelButtonLabel;
+
+                    $scope.mdtTranslations.columnSelector.title = $scope.mdtTranslations.columnSelector.title || providerTranslations.columnSelector.title;
+                    $scope.mdtTranslations.columnSelector.selectAll = $scope.mdtTranslations.columnSelector.selectAll || providerTranslations.columnSelector.selectAll;
+                    $scope.mdtTranslations.columnSelector.selectedSingular = $scope.mdtTranslations.columnSelector.selectedSingular || providerTranslations.columnSelector.selectedSingular;
+                    $scope.mdtTranslations.columnSelector.selectedPlural = $scope.mdtTranslations.columnSelector.selectedPlural || providerTranslations.columnSelector.selectedPlural;
+                    $scope.mdtTranslations.columnSelector.clear = $scope.mdtTranslations.columnSelector.clear || providerTranslations.columnSelector.clear;
+                    $scope.mdtTranslations.columnSelector.ok = $scope.mdtTranslations.columnSelector.ok || providerTranslations.columnSelector.ok;
+
+                    $scope.mdtTranslations.columnSelector.cancel = $scope.mdtTranslations.columnSelector.cancel || providerTranslations.columnSelector.cancel;
                 }
 
                 // fill storage with values if set

@@ -320,6 +320,31 @@ There is only one scope variable that you can use in your template, and it's cal
 |:white_check_mark:| html-content                                   |                    | Boolean       | When the cell content is not a simple value (html content) |
 
 
+# Translating globally:
+```js
+// ...
+.config(function (MdtTranslationsProvider) {
+    MdtTranslationsProvider.replaceAll({
+    rowsPerPage: 'Rows per page:',
+    of: 'of',
+    largeEditDialog: {
+        saveButtonLabel: 'Save',
+        cancelButtonLabel: 'Cancel',
+    },
+    columnSelector: {
+        title: 'Columns',
+        selectAll: 'Select all',
+        selectedSingular: 'Selected',
+        selectedPlural: 'Selected',
+        clear: 'Clear',
+        ok: 'Ok',
+        cancel: 'Cancel'
+    }
+    });
+})
+// ...
+```
+
 ## Example usage:
 ```html
 <mdt-table
